@@ -1,0 +1,92 @@
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --gray-blue: hsl(217, 19%, 38%);
+  --dark-gray-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Manrope', sans-serif;
+}
+
+.card {
+  background-color: var(--dark-gray-blue);
+  max-width: 90%;
+  padding: 2em;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.title {
+  color: var(--neon-green);
+  letter-spacing: 0.4em;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.advice {
+  color: var(--light-cyan);
+  margin-bottom: 1.5em;
+  font-size: 1.6em;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--dark-gray-blue);
+}
+
+.divider {
+  margin-bottom: 2rem;
+  background-image: url('./images/pattern-divider-mobile.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0.8em;
+  margin-bottom: 2.2rem;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--neon-green);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:active {
+  box-shadow: 0 0 20px 10px hsla(150, 100%, 66%, 0.4);
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 600px;
+    padding: 3em;
+  }
+
+  .divider {
+    background-image: url('images/pattern-divider-desktop.svg');
+  }
+}
